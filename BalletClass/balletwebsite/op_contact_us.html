@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>OnPointe | Contacts</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="op_style.css">
+
+
+<!--Itallya Taylor
+    November 17 2020-->
+</head>
+<body>
+<div class="main-indents">
+  <div class="main">
+    <!-- Header -->
+    <header>
+      <a class="pname" href="op_contacts_us.html">Contact Us</a>
+        <nav>
+          <ul class="menu">
+            <li><a href="op_home.html">Home</a></li>
+            <li><a href="op_gallery.html">Gallery</a></li>
+            <li><a href="op_contact_us.html">Contacts</a></li>
+      </ul>
+        </nav>
+    </header>
+    <!-- Slider -->
+     <!-- SlideShow -->
+      <div class="slideshow">
+        <div class="slide">
+          <div class="count">1/4</div>
+          <img src="slide1.jpg" style="width:100%" >
+          <div class="imgtxt">Dance, Like no One is Watching</div>
+        </div>
+
+        <div class="slide">
+          <div class="count">2/4</div>
+          <img src="slide3.jpg" style="width:100%" >
+          <div class="imgtxt">Dance, Like no One is Watching</div>
+        </div>
+
+        <div class="slide">
+          <div class="count">3/4</div>
+          <img src="slide5.jpg" style="width:100%" >
+          <div class="imgtxt">Dance, Like no One is Watching</div>
+        </div>
+
+        <div class="slide">
+          <div class="count">4/4</div>
+          <img src="slide6.jpg" style="width:100%" >
+          <div class="imgtxt">Dance, Like no One is Watching</div>
+        </div>
+      </div>
+      <br>
+
+      <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+      </div>
+
+      <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() 
+      {
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+      }
+    </script>
+    <br>
+    <!-- Content -->
+    <div class="container">
+      <article class="a1">
+        <div class="wrapper"><img src="map1.png" style="width: 45%;" class="contact-img">
+          <div class="extra-wrap">
+            <p>Join the show and dance with us everyday of the week. Call and/or email us to buy tickets for our matinee perfomace of Swan Lake. It is never to early to reserve ticket for our later shows of Alice in Wonderland and Giselle.</p>
+            
+            <p><strong>Visit us at:</strong></p>
+            <p>On Pointe<br />
+              4200 Wisconsin Ave<br />
+              Washington, DC 20745
+            </p>
+
+            <p>Call: <a href="#">(202) 948-3531</a><br>Email: <a href="#" target="_blank">onpointeballet@gmail.com</a></p>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="social">Social Media</div>
+        <ul>
+          <li><h2>Facebook</h2><a href="https://www.facebook.com/TWBwomenscommittee/" target="_blank"><p>The Washington Ballet</p></a></li>
+
+          <li><h2>Instagram</h2><a href="https://www.instagram.com/thewashingtonballet/" target="_blank"><p>The Washington Ballet</p></a></li>
+
+          <li><h2>Twitter</h2><a href="https://twitter.com/twballet" target="_blank"><p>The Washington Ballet</p></a></li>
+
+          <li><h2>Contact</h2><a href="op_contact_us.html"><p>Contact Us</p></a></li>
+      </ul>
+        <div class="row">
+          <div class="col-1-1">
+            <p>Copyright2020-All Rights Reserved-www.onpointe.com ~ Created by <a href="creator/Resume.html" target="_blank">Itallya Taylor</a></p>
+          </div>
+        </div>
+      </footer>
+  </div>
+</div>
+</body>
+</html>
